@@ -1,4 +1,4 @@
-package DataStruct
+package main
 
 type ItemQueue struct {
 	items []interface{}

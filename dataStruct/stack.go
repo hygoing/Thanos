@@ -1,4 +1,4 @@
-package DataStruct
+package main
 
 type ItemStack struct {
 	items []interface{}
