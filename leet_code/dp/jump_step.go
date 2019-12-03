@@ -32,7 +32,7 @@ func main() {
 
 	//用来存储结果
 	var result = make([]int, 0)
-	//用来存储数组下表台阶数时爬出深渊的方式数目
+	//用来存储数组下标台阶数时爬出深渊的方式数目
 	stepToCount := []int{1, 1, 2}
 	for _, stepLength := range stepLengths {
 		if stepLength == 1 {
@@ -48,7 +48,7 @@ func main() {
 			for base := 1; base <= tempStepLength; base = base * 2 {
 				tempStepCount = tempStepCount + stepToCount[tempStepLength-base]
 			}
-			if len(stepToCount) -1 < tempStepLength {
+			if len(stepToCount) == tempStepLength {
 				stepToCount = append(stepToCount, tempStepCount % 1000000003)
 			}
 		}

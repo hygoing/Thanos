@@ -86,7 +86,7 @@ answer 2
 		}
 	}
 
-	if (m+n )%2 == 0 {
+	if (m+n)%2 == 0 {
 		return (float64(left) + float64(right)) / 2
 	} else {
 		return float64(right)
