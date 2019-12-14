@@ -1,8 +1,5 @@
 package main
 
-import "fmt"
-
-
 func spiralOrder(matrix [][]int) []int {
 	res := make([]int, 0)
 	if len(matrix) == 0 {
@@ -29,6 +26,7 @@ func spiralOrder(matrix [][]int) []int {
 			row = row - 1
 		}
 		row_min, row_max, column_min, column_max = row_min + 1, row_max - 1, column_min +1, column_max - 1
+		row, column = row +1, column + 1
 	}
 	if row_min == row_max && column_min <= column_max{
 		res = append(res, matrix[row_min][column_min:column_max+1]...)
